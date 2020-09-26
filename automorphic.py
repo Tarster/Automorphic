@@ -1,6 +1,14 @@
+'''
+On value 34 (neither trimorphic nor automorphic),
+On value 24 (Not amorphic but trimorphic),
+On value 26 (Neither trimorphic not automorphic),
+On value 25 (both automorphic and trimorphic)
+'''
+
+
 def automorphic(num, sq, cube, i):
-    while(i > 0):
-        if(num % 10 != sq % 10):
+    while i > 0:
+        if num % 10 != sq % 10:
             return False
         else:
             num //= 10
@@ -11,8 +19,8 @@ def automorphic(num, sq, cube, i):
 
 def trimorphic(num, cube):
     j = len(str(num))
-    while(j > 0):
-        if (num % 10 != cube % 10):
+    while j > 0:
+        if num % 10 != cube % 10:
             return False
 
         else:
@@ -23,7 +31,7 @@ def trimorphic(num, cube):
 
 
 def rerun():
-    while (True):
+    while True:
         try:
             print("Please enter a number: ")
             num = int(input())
@@ -51,17 +59,11 @@ def rerun():
 rerun()
 
 
-while(True):
+while True:
     print("Do you want to try another number?(y/n) ")
     repeat = input()
-    if (repeat == 'y'):
+    if repeat == 'y':
         rerun()
     else:
         print('Goodbye!')
         break
-
-
-# On value 34 (neither trimorphic nor automorphic),
-# On value 24 (Not amorphic but trimorphic),
-# On value 26 (Neither trimorphic not automorphic),
-# On value 25 (both automorphic and trimorphic)
