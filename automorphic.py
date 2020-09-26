@@ -1,9 +1,9 @@
-'''
+"""
 On value 34 (neither trimorphic nor automorphic),
 On value 24 (Not amorphic but trimorphic),
 On value 26 (Neither trimorphic not automorphic),
 On value 25 (both automorphic and trimorphic)
-'''
+"""
 
 
 def automorphic(num, sq, cube, i):
@@ -62,7 +62,7 @@ rerun()
 while True:
     print("Do you want to try another number?(y/n) ")
     repeat = input()
-    if repeat == 'y':
+    if repeat in ('y', 'yes', 'si', 'da'):
         rerun()
     else:
         print('Goodbye!')
